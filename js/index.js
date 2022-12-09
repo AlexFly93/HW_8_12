@@ -30,7 +30,11 @@ const user = {
 
 const { privateInfo: { bday: { year: userBirthYear } } } = user
 console.log(userBirthYear)
-const { privateInfo: { children:[two]} } = user
-console.log(two);
+const {
+  privateInfo: {
+    children: [, nameSecondChildren],
+  },
+} = user;
+console.log(nameSecondChildren);
 const { contactInfo: { phone: { work: userWorkPhone } } } = user
 console.log(userWorkPhone)
